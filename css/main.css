@@ -137,6 +137,7 @@ address {
 }
 .social__link:hover, .social__link:focus {
   background-color: #2196f3;
+  color: #ffffff;
 }
 
 .social__item:not(:last-child) {
@@ -377,8 +378,9 @@ address {
   padding: 40px;
 }
 
-.label {
+.form-field__label {
   margin-bottom: 4px;
+  color: #757575;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -446,6 +448,7 @@ address {
 
 .form-textarea__label {
   margin-bottom: 4px;
+  color: #757575;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -462,8 +465,18 @@ address {
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-textarea__field:focus {
+.form-textarea__field:hover, .form-textarea__field:focus {
   border: 1px solid #2196f3;
+}
+
+.form-field:focus-within .form-field__input,
+.form-field:hover .form-field__input {
+  border: 1px solid #2196f3;
+}
+
+.form-field:focus-within .form-field__icon,
+.form-field:hover .form-field__icon {
+  fill: #2196f3;
 }
 
 /* чекбокс */

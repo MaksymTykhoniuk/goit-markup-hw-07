@@ -2,9 +2,10 @@
   padding: 40px;
 }
 
-.label {
+.form-field__label {
   margin-bottom: 4px;
 
+  color: $primary-text-color;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -66,6 +67,7 @@
 .form-textarea__label {
   margin-bottom: 4px;
 
+  color: $primary-text-color;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -82,9 +84,20 @@
 
   transition: border 250ms $time-function;
 
+  &:hover,
   &:focus {
     border: 1px solid $primary-accent-color;
   }
+}
+
+.form-field:focus-within .form-field__input,
+.form-field:hover .form-field__input {
+  border: 1px solid $primary-accent-color;
+}
+
+.form-field:focus-within .form-field__icon,
+.form-field:hover .form-field__icon {
+  fill: $primary-accent-color;
 }
 
 /* чекбокс */
@@ -118,8 +131,8 @@
   border: 2px solid $primary-black-color;
   border-radius: 4px;
 
-  transition: background-color 250ms $time-function,
-    background-image 250ms $time-function, border-color 250ms $time-function;
+  transition: background-color 250ms $time-function, background-image 250ms $time-function,
+    border-color 250ms $time-function;
 }
 
 .checkbox__input:checked + .checkbox__icon {
